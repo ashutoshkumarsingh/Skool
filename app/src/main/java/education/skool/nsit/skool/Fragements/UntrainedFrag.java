@@ -1,4 +1,4 @@
-package education.skool.nsit.skool;
+package education.skool.nsit.skool.Fragements;
 
 
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import education.skool.nsit.skool.R;
 
 
 public class Fragone extends Fragment {

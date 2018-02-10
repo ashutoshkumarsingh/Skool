@@ -1,4 +1,4 @@
-package education.skool.nsit.skool;
+package education.skool.nsit.skool.Fragements;
 
 
 import android.app.Dialog;
@@ -17,6 +17,11 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import education.skool.nsit.skool.Adapter.CustomDetailsAdapter;
+import education.skool.nsit.skool.Helpers.FirebaseHelper;
+import education.skool.nsit.skool.Models.MenteeModel;
+import education.skool.nsit.skool.R;
 
 
 public class Fragtwo extends Fragment {

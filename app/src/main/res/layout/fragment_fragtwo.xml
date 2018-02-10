@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="education.skool.nsit.skool.Fragtwo">
+
+    <ListView
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:padding="5dp"
+        android:id="@+id/listView_fragtwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_gravity="end"
+            android:src="@drawable/add"
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

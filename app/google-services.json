@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "911580445409",
+    "firebase_url": "https://skool-1083c.firebaseio.com",
+    "project_id": "skool-1083c",
+    "storage_bucket": "skool-1083c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911580445409:android:8a14d642fb1b4923",
+        "android_client_info": {
+          "package_name": "education.skool.nsit.skool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911580445409-fjid03b20ioipq98on4ui0f3ujdk0p06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcn5__T1x_DJo7abjSJLiFbS6SVkNfLeQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

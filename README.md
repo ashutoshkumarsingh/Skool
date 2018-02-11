@@ -1,0 +1,2 @@
+# Skool
+##### Our problem Statement is related with the Education and on trek we identified that few children who are willing to study can't make to the school as low background, so we came up with the solution in which we could help them to get admission in the school,  through this app a mentor will select a student or group and teach them for a while and if students do well they will be donated by the app users to get admission in the school.

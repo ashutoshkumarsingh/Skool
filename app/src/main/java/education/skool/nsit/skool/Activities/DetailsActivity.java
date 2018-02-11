@@ -1,4 +1,4 @@
-package education.skool.nsit.skool;
+package education.skool.nsit.skool.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +8,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import education.skool.nsit.skool.Fragments.LeaderBoardFrag;
+import education.skool.nsit.skool.Fragments.UntrainedFrag;
+import education.skool.nsit.skool.Fragments.ScholarFrag;
+import education.skool.nsit.skool.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -45,17 +50,20 @@ public class DetailsActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             Fragment fragment = null;
             if (position == 0) {
-                fragment = new Fragone();
+                fragment = new UntrainedFrag();
             }
             if (position == 1) {
-                fragment = new Fragtwo();
+                fragment = new ScholarFrag();
+            }
+            if (position == 2) {
+                fragment = new LeaderBoardFrag();
             }
             return fragment;
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -65,6 +73,8 @@ public class DetailsActivity extends AppCompatActivity {
                     return "Untrained";
                 case 1:
                     return "Scholar";
+                case 3:
+                    return "LeaderBoard";
             }
             return null;
         }

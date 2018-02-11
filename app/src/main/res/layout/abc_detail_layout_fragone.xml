@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Name"
-                android:id="@+id/nameTxt"
+                android:id="@+id/nameTxtFragOne"
                 android:padding="10dp"
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Location"
-                android:id="@+id/locationTxt"
+                android:id="@+id/locationTxtFragOne"
                 android:padding="10dp"
                 android:layout_alignParentLeft="true"
                 />
@@ -45,15 +45,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Description"
                 android:textStyle="italic"
-                android:id="@+id/description" />
+                android:id="@+id/descriptionFragOne" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Payment"
-                android:textStyle="bold"
-                android:id="@+id/paymentbtn" />
 
     </LinearLayout>
 

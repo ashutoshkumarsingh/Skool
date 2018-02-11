@@ -1,4 +1,4 @@
-package education.skool.nsit.skool.Fragements;
+package education.skool.nsit.skool.Fragments;
 
 
 import android.app.Dialog;
@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -18,23 +16,22 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import education.skool.nsit.skool.Adapter.CustomDetailsAdapter;
-import education.skool.nsit.skool.Helpers.FirebaseHelper;
-import education.skool.nsit.skool.Models.MenteeModel;
+import education.skool.nsit.skool.Adapter.CustomAdapterFragOne;
+import education.skool.nsit.skool.Helpers.FirebaseHelperFragOne;
+import education.skool.nsit.skool.Models.MenteeModelFragOne;
 import education.skool.nsit.skool.R;
 
 
-public class Fragtwo extends Fragment {
+public class UntrainedFrag extends Fragment {
 
     DatabaseReference db;
-    FirebaseHelper helper;
-    CustomDetailsAdapter adapter;
+    FirebaseHelperFragOne helper;
+    CustomAdapterFragOne adapter;
     ListView lv;
     EditText nameEditTxt, propTxt, descTxt;
     FloatingActionButton add;
 
-
-    public Fragtwo() {
+    public UntrainedFrag() {
         // Required empty public constructor
     }
 
@@ -42,18 +39,18 @@ public class Fragtwo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fragtwo, container, false);
 
-        lv =(ListView) view.findViewById(R.id.listView_fragtwo);
-        add=(FloatingActionButton) view.findViewById(R.id.add);
+
+        View view= inflater.inflate(R.layout.fragment_fragone, container, false);
+
+        lv =(ListView) view.findViewById(R.id.listView_fragone);
+        add=(FloatingActionButton) view.findViewById(R.id.add_fragOne);
         lv.setAdapter(adapter);
 
         db = FirebaseDatabase.getInstance().getReference();
-        helper = new FirebaseHelper(db);
+        helper = new FirebaseHelperFragOne(db);
 
-        //ADAPTER
-        adapter = new CustomDetailsAdapter(getActivity(), helper.retrieve());
+        adapter = new CustomAdapterFragOne(getActivity(), helper.retrieve());
         lv.setAdapter(adapter);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -63,38 +60,35 @@ public class Fragtwo extends Fragment {
             }
         });
 
-
         return view;
+
     }
 
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-    }
 
     private void displayInputDialog() {
         Dialog d = new Dialog(getActivity());
         d.setTitle("Add Scholar Details");
-        d.setContentView(R.layout.abc_dialog);
+        d.setContentView(R.layout.abc_dialog_fragone);
 
-        nameEditTxt = (EditText) d.findViewById(R.id.nameEditText);
-        propTxt = (EditText) d.findViewById(R.id.propellantEditText);
-        descTxt = (EditText) d.findViewById(R.id.descEditText);
-        Button saveBtn = (Button) d.findViewById(R.id.saveBtn);
+        nameEditTxt = (EditText) d.findViewById(R.id.nameEditTextFragOne);
+        propTxt = (EditText) d.findViewById(R.id.locationEditextFragOne);
+        descTxt = (EditText) d.findViewById(R.id.descEditTextFragOne);
+        Button saveBtn = (Button) d.findViewById(R.id.saveBtnFragOne);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 String name = nameEditTxt.getText().toString();
-                String propellant = propTxt.getText().toString();
+                String location = propTxt.getText().toString();
                 String desc = descTxt.getText().toString();
 
-                MenteeModel s = new MenteeModel();
+
+                MenteeModelFragOne s = new MenteeModelFragOne();
                 s.setName(name);
-                s.setLocation(propellant);
+                s.setLocation(location);
                 s.setDescription(desc);
+
 
 
                 if (name != null && name.length() > 0) {
@@ -103,8 +97,7 @@ public class Fragtwo extends Fragment {
                         propTxt.setText("");
                         descTxt.setText("");
 
-
-                        adapter = new CustomDetailsAdapter(getActivity(), helper.retrieve());
+                        adapter = new CustomAdapterFragOne(getActivity(), helper.retrieve());
                         lv.setAdapter(adapter);
 
 
@@ -119,5 +112,4 @@ public class Fragtwo extends Fragment {
 
         d.show();
     }
-
 }

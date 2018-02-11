@@ -1,4 +1,4 @@
-package education.skool.nsit.skool;
+package education.skool.nsit.skool.Activities;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -24,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import education.skool.nsit.skool.R;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
     private static EditText fullName, emailId, mobileNumber,password;

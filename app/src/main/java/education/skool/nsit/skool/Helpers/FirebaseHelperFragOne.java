@@ -8,20 +8,20 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 
-import education.skool.nsit.skool.Models.MenteeModel;
+import education.skool.nsit.skool.Models.MenteeModelFragOne;
 
-public class FirebaseHelper {
+public class FirebaseHelperFragOne {
 
     DatabaseReference db;
     Boolean saved;
-    ArrayList<MenteeModel> menteeModels =new ArrayList<>();
+    ArrayList<MenteeModelFragOne> menteeModelFragOnes =new ArrayList<>();
 
-    public FirebaseHelper(DatabaseReference db) {
+    public FirebaseHelperFragOne(DatabaseReference db) {
         this.db = db;
     }
-    public Boolean save(MenteeModel menteeModel)
+    public Boolean save(MenteeModelFragOne menteeModelFragOne)
     {
-        if(menteeModel ==null)
+        if(menteeModelFragOne ==null)
         {
             saved=false;
         }else
@@ -29,7 +29,7 @@ public class FirebaseHelper {
 
             try
             {
-                db.child("MenteesPaid").push().setValue(menteeModel);
+                db.child("MenteesUnPaid").push().setValue(menteeModelFragOne);
                 saved=true;
 
             }catch (DatabaseException e)
@@ -44,16 +44,16 @@ public class FirebaseHelper {
 
     private void fetchData(DataSnapshot dataSnapshot)
     {
-        menteeModels.clear();
+        menteeModelFragOnes.clear();
 
         for (DataSnapshot ds : dataSnapshot.getChildren())
         {
-            MenteeModel menteeModel =ds.getValue(MenteeModel.class);
-            menteeModels.add(menteeModel);
+            MenteeModelFragOne menteeModelFragOne =ds.getValue(MenteeModelFragOne.class);
+            menteeModelFragOnes.add(menteeModelFragOne);
         }
     }
 
-    public ArrayList<MenteeModel> retrieve()
+    public ArrayList<MenteeModelFragOne> retrieve()
     {
         db.addChildEventListener(new ChildEventListener() {
             @Override
@@ -84,7 +84,7 @@ public class FirebaseHelper {
         });
 
 
-        return menteeModels;
+        return menteeModelFragOnes;
     }
 
 

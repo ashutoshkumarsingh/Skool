@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    tools:context="education.skool.nsit.skool.Fragtwo">
+    tools:context="education.skool.nsit.skool.Fragments.ScholarFrag">
 
     <ListView
         android:divider="@android:color/transparent"
@@ -31,6 +31,5 @@
             />
 
     </LinearLayout>
-
 
 </RelativeLayout>

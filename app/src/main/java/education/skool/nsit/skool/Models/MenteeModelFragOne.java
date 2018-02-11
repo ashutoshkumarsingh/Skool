@@ -1,20 +1,13 @@
 package education.skool.nsit.skool.Models;
 
 
-public class MenteeModel
+public class MenteeModelFragOne
 
     {
-    String name, location,description,payment;
+    String name, location,description;
 
-        public String getPayment() {
-            return payment;
-        }
 
-        public void setPayment(String payment) {
-            this.payment = payment;
-        }
-
-        public MenteeModel() {
+        public MenteeModelFragOne() {
     }
 
     public String getName() {

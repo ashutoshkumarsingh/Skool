@@ -1,4 +1,4 @@
-package education.skool.nsit.skool;
+package education.skool.nsit.skool.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +23,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import education.skool.nsit.skool.R;
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -177,7 +179,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 }
                             } else {
                                 Toast.makeText(getApplicationContext(),"LoggedIn",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, DetailsActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
